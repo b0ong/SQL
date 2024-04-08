@@ -1,0 +1,29 @@
+CREATE TABLE DEPT_tmp as SELECT * FROM DEPT d;
+
+SELECT *
+FROM DEPT_TMP;
+
+-- update ~ set
+UPDATE DEPT_TMP
+SET loc = 'SEOUL';  -- 해당열 전체 수정
+
+UPDATE DEPT_TMP
+SET DNAME = 'DATABASE', LOC = 'BUSAN'
+WHERE DEPTNO = 40;          -- 일부 부분만 수정할 때는 where 조건문 사용
+-- 서브쿼리를 사용한 데이터 수정
+UPDATE DEPT_TMP
+SET (DNAME, LOC) = (SELECT DNAME, LOC FROM DEPT WHERE DEPTNO = 40)
+WHERE DEPTNO = 40;
+/* 삭제하기 */
+CREATE TABLE EMP_TMP AS
+SELECT *
+FROM EMP;
+
+DELETE
+FROM EMP_TMP
+WHERE JOB = 'SALESMAN';
+-- 서브쿼리를 통한 삭제
+DELETE
+FROM EMP_TMP;       -- DATA만 삭제되고 TABLE은 삭제안됨
+
+DROP TABLE EMP_TMP;     -- TABLE 삭제(DROP 사용)
