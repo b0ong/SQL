@@ -2,6 +2,8 @@
 <project version="4">
   <component name="SqlDialectMappings">
     <file url="file://$PROJECT_DIR$/.idea/Day04_1.sql" dialect="Oracle" />
+    <file url="file://$PROJECT_DIR$/.idea/Day05.sql" dialect="Oracle" />
+    <file url="file://$PROJECT_DIR$/Day03.sql" dialect="Oracle" />
     <file url="file://$PROJECT_DIR$/Day04.sql" dialect="Oracle" />
   </component>
 </project>
